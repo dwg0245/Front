@@ -14,7 +14,7 @@ const router = createRouter({
         title: '게시판',
         requiresAuth: false,
       },
-      component: () => import('../views/board/board.vue'),
+      component: () => import('../views/board/Board.vue'),
     },
   ],
 })
