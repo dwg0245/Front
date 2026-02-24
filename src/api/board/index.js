@@ -26,4 +26,10 @@ const boardUpdate = async (idx, data) => {
   return result
 }
 
-export default { boardFun, boardListFun, boardDescFun, boardUpdate }
+// 게시글 삭제
+const boardDelete = async (idx) => {
+  const result = await api.delete(`board/delete/${idx}`)
+  return result
+}
+
+export default { boardFun, boardListFun, boardDescFun, boardUpdate, boardDelete }
