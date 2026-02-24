@@ -8,13 +8,22 @@ const router = createRouter({
       name: 'home',
     },
     {
-      name: 'board',
+      name: 'boardSave',
       path: '/board/save',
       meta: {
         title: '게시판',
         requiresAuth: false,
       },
       component: () => import('../views/board/Board.vue'),
+    },
+    {
+      name: 'boardList',
+      path: '/board/list',
+      meta: {
+        title: '게시판 목록 조회',
+        requiresAuth: false,
+      },
+      component: () => import('../views/board/BoardList.vue'),
     },
   ],
 })
