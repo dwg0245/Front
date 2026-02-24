@@ -14,8 +14,16 @@ const boardListFun = async () => {
 
 // 게시글 목록 조회
 const boardDescFun = async (idx) => {
-  const result = await api.get(`/board/desc/${idx}`, idx)
+  console.log(idx)
+  const result = await api.get(`/board/desc/${idx}`)
   return result
 }
 
-export default { boardFun, boardListFun, boardDescFun }
+// 게시글 업데이트
+const boardUpdate = async (idx, data) => {
+  const result = await api.put(`/board/update/${idx}`, data)
+
+  return result
+}
+
+export default { boardFun, boardListFun, boardDescFun, boardUpdate }

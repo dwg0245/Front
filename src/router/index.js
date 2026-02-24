@@ -34,6 +34,15 @@ const router = createRouter({
       },
       component: () => import('../views/board/BoardDesc.vue'),
     },
+    {
+      name: 'boardupdate',
+      path: '/board/update',
+      meta: {
+        title: '게시글 수정',
+        requiresAuth: false,
+      },
+      component: () => import('../views/board/BoardUpdate.vue'),
+    },
   ],
 })
 
