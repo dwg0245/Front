@@ -43,6 +43,15 @@ const router = createRouter({
       },
       component: () => import('../views/board/BoardUpdate.vue'),
     },
+    {
+      name: 'boarddelete',
+      path: '/board/delete',
+      meta: {
+        title: '게시글 삭제',
+        requiresAuth: false,
+      },
+      component: () => import('../views/board/BoardDelete.vue'),
+    },
   ],
 })
 
