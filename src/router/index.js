@@ -25,6 +25,15 @@ const router = createRouter({
       },
       component: () => import('../views/board/BoardList.vue'),
     },
+    {
+      name: 'boarddesc',
+      path: '/board/desc',
+      meta: {
+        title: '게시판 목록 상세 조회',
+        requiresAuth: false,
+      },
+      component: () => import('../views/board/BoardDesc.vue'),
+    },
   ],
 })
 
